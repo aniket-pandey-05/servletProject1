@@ -15,11 +15,11 @@ public class Helloservlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response)
             throws IOException {
-
+        String name = request.getParameter("name");
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
 
-        out.println("<h1>Hello from Servlet!</h1>");
+        out.println("<h1>Hello "+ name +"from Servlet!</h1>");
     }
 }
